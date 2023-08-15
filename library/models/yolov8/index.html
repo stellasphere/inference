@@ -7,16 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="With no prior knowledge of machine learning or device-specific deployment, you can deploy a computer vision model to a range of devices and environments using the Roboflow Inference Server." name="description"/>
 <meta content="Roboflow" name="author"/>
-<link href="https://roboflow.github.io/inference-server/library/models/yolov8/" rel="canonical"/>
+<link href="https://roboflow.github.io/inference/library/models/yolov8/" rel="canonical"/>
 <link href="../yolov5/" rel="prev"/>
 <link href="../yolov8_classification/" rel="next"/>
 <link href="https://media.roboflow.com/laptop-lenny.png" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
-<title>YOLOv8 Object Detection - Roboflow Inference Server</title>
+<title>YOLOv8 Object Detection - Roboflow Inference</title>
 <link href="../../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../../styles.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-T0CED2YY8K"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-T0CED2YY8K",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-T0CED2YY8K",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
@@ -38,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Roboflow Inference Server" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -48,7 +49,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Roboflow Inference Server
+            Roboflow Inference
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -91,12 +92,12 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -110,18 +111,18 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Roboflow Inference Server" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
-    Roboflow Inference Server
+    Roboflow Inference
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -207,9 +208,36 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          YOLOv8 Object Detection
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         YOLOv8 Object Detection
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel">
+    inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.weights_file">
+    weights_file
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.predict">
+    predict()
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../yolov8_classification/">
@@ -336,6 +364,27 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel">
+    inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.weights_file">
+    weights_file
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.predict">
+    predict()
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -343,6 +392,251 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="yolov8-object-detection">YOLOv8 Object Detection<a class="headerlink" href="#yolov8-object-detection" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-class">
+<a id="inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel"></a>
+<div class="doc doc-contents first">
+<p class="doc doc-class-bases">
+        Bases: <code><span title="inference.core.models.object_detection_base.ObjectDetectionBaseOnnxRoboflowInferenceModel">ObjectDetectionBaseOnnxRoboflowInferenceModel</span></code>, <code><span title="inference.core.models.mixins.ObjectDetectionMixin">ObjectDetectionMixin</span></code></p>
+<p>Roboflow ONNX Object detection model (Implements an object detection specific infer method).</p>
+<p>This class is responsible for performing object detection using the YOLOv8 model
+with ONNX runtime.</p>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>weights_file</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Path to the ONNX weights file.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="methods" open="">
+<summary>Methods</summary>
+<p>predict: Performs object detection on the given image using the ONNX session.</p>
+</details>
+<details class="quote">
+<summary>Source code in <code>inference/models/yolov8/yolov8_object_detection.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">YOLOv8ObjectDetectionOnnxRoboflowInferenceModel</span><span class="p">(</span>
+    <span class="n">ObjectDetectionBaseOnnxRoboflowInferenceModel</span><span class="p">,</span> <span class="n">ObjectDetectionMixin</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Roboflow ONNX Object detection model (Implements an object detection specific infer method).</span>
+
+<span class="sd">    This class is responsible for performing object detection using the YOLOv8 model</span>
+<span class="sd">    with ONNX runtime.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        weights_file (str): Path to the ONNX weights file.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        predict: Performs object detection on the given image using the ONNX session.</span>
+<span class="sd">    """</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">weights_file</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Gets the weights file for the YOLOv8 model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Path to the ONNX weights file.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="s2">"weights.onnx"</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_in</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Performs object detection on the given image using the ONNX session.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            img_in (np.ndarray): Input image as a NumPy array.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: NumPy array representing the predictions, including boxes, confidence scores, and class confidence scores.</span>
+<span class="sd">        """</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">input_name</span><span class="p">:</span> <span class="n">img_in</span><span class="p">})[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">boxes</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">class_confs</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">4</span><span class="p">:]</span>
+        <span class="n">confs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">class_confs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">boxes</span><span class="p">,</span> <span class="n">confs</span><span class="p">,</span> <span class="n">class_confs</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">predictions</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="doc doc-children">
+<div class="doc doc-object doc-attribute">
+<h2 class="doc doc-heading" id="inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.weights_file">
+<code class="highlight language-python"><span class="n">weights_file</span><span class="p">:</span> <span class="nb">str</span></code>
+<span class="doc doc-labels">
+<small class="doc doc-label doc-label-property"><code>property</code></small>
+</span>
+<a class="headerlink" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.weights_file" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Gets the weights file for the YOLOv8 model.</p>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td> <td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Path to the ONNX weights file.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.predict">
+<code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="n">img_in</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.yolov8.yolov8_object_detection.YOLOv8ObjectDetectionOnnxRoboflowInferenceModel.predict" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Performs object detection on the given image using the ONNX session.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>img_in</code></td>
+<td>
+<code><span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Input image as a NumPy array.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>np.ndarray: NumPy array representing the predictions, including boxes, confidence scores, and class confidence scores.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/yolov8/yolov8_object_detection.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_in</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Performs object detection on the given image using the ONNX session.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        img_in (np.ndarray): Input image as a NumPy array.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: NumPy array representing the predictions, including boxes, confidence scores, and class confidence scores.</span>
+<span class="sd">    """</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">input_name</span><span class="p">:</span> <span class="n">img_in</span><span class="p">})[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">predictions</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">boxes</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[:,</span> <span class="p">:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">class_confs</span> <span class="o">=</span> <span class="n">predictions</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">4</span><span class="p">:]</span>
+    <span class="n">confs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">class_confs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">boxes</span><span class="p">,</span> <span class="n">confs</span><span class="p">,</span> <span class="n">class_confs</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>

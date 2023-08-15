@@ -7,16 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="With no prior knowledge of machine learning or device-specific deployment, you can deploy a computer vision model to a range of devices and environments using the Roboflow Inference Server." name="description"/>
 <meta content="Roboflow" name="author"/>
-<link href="https://roboflow.github.io/inference-server/library/models/clip/" rel="canonical"/>
+<link href="https://roboflow.github.io/inference/library/models/clip/" rel="canonical"/>
 <link href="../../../api/" rel="prev"/>
 <link href="../segment_anything/" rel="next"/>
 <link href="https://media.roboflow.com/laptop-lenny.png" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
-<title>CLIP - Roboflow Inference Server</title>
+<title>CLIP - Roboflow Inference</title>
 <link href="../../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../../styles.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-T0CED2YY8K"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-T0CED2YY8K",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-T0CED2YY8K",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
@@ -38,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Roboflow Inference Server" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -48,7 +49,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Roboflow Inference Server
+            Roboflow Inference
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -91,12 +92,12 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -110,18 +111,18 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Roboflow Inference Server" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
-    Roboflow Inference Server
+    Roboflow Inference
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -187,9 +188,61 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          CLIP
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         CLIP
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel">
+    inference.models.clip.clip.ClipOnnxRoboflowCoreModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.compare">
+    compare()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_image">
+    embed_image()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_text">
+    embed_text()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.get_infer_bucket_file_list">
+    get_infer_bucket_file_list()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.infer">
+    infer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.preproc_image">
+    preproc_image()
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../segment_anything/">
@@ -336,6 +389,52 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel">
+    inference.models.clip.clip.ClipOnnxRoboflowCoreModel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.__init__">
+    __init__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.compare">
+    compare()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_image">
+    embed_image()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_text">
+    embed_text()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.get_infer_bucket_file_list">
+    get_infer_bucket_file_list()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.infer">
+    infer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.preproc_image">
+    preproc_image()
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -343,6 +442,1293 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="clip">CLIP<a class="headerlink" href="#clip" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-class">
+<a id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel"></a>
+<div class="doc doc-contents first">
+<p class="doc doc-class-bases">
+        Bases: <code><span title="inference.core.models.roboflow.OnnxRoboflowCoreModel">OnnxRoboflowCoreModel</span></code></p>
+<p>Roboflow ONNX Clip model.</p>
+<p>This class is responsible for handling the ONNX Clip model, including
+loading the model, preprocessing the input, and performing inference.</p>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>visual_onnx_session</code></td>
+<td>
+<code>onnxruntime.<span title="onnxruntime.InferenceSession">InferenceSession</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>ONNX Runtime session for visual inference.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>textual_onnx_session</code></td>
+<td>
+<code>onnxruntime.<span title="onnxruntime.InferenceSession">InferenceSession</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>ONNX Runtime session for textual inference.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>resolution</code></td>
+<td>
+<code>int</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The resolution of the input image.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>clip_preprocess</code></td>
+<td>
+<code>function</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Function to preprocess the image.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">ClipOnnxRoboflowCoreModel</span><span class="p">(</span><span class="n">OnnxRoboflowCoreModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Roboflow ONNX Clip model.</span>
+
+<span class="sd">    This class is responsible for handling the ONNX Clip model, including</span>
+<span class="sd">    loading the model, preprocessing the input, and performing inference.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        visual_onnx_session (onnxruntime.InferenceSession): ONNX Runtime session for visual inference.</span>
+<span class="sd">        textual_onnx_session (onnxruntime.InferenceSession): ONNX Runtime session for textual inference.</span>
+<span class="sd">        resolution (int): The resolution of the input image.</span>
+<span class="sd">        clip_preprocess (function): Function to preprocess the image.</span>
+<span class="sd">    """</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Initializes the ClipOnnxRoboflowCoreModel with the given arguments and keyword arguments."""</span>
+
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># Create an ONNX Runtime Session with a list of execution providers in priority order. ORT attempts to load providers until one is successful. This keeps the code across devices identical.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Creating inference sessions"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cache_file</span><span class="p">(</span><span class="s2">"visual.onnx"</span><span class="p">),</span>
+            <span class="n">providers</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">(</span>
+                    <span class="s2">"TensorrtExecutionProvider"</span><span class="p">,</span>
+                    <span class="p">{</span>
+                        <span class="s2">"trt_engine_cache_enable"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="s2">"trt_engine_cache_path"</span><span class="p">:</span> <span class="n">TENSORRT_CACHE_PATH</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">),</span>
+                <span class="s2">"CUDAExecutionProvider"</span><span class="p">,</span>
+                <span class="s2">"CPUExecutionProvider"</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cache_file</span><span class="p">(</span><span class="s2">"textual.onnx"</span><span class="p">),</span>
+            <span class="n">providers</span><span class="o">=</span><span class="p">[</span>
+                <span class="p">(</span>
+                    <span class="s2">"TensorrtExecutionProvider"</span><span class="p">,</span>
+                    <span class="p">{</span>
+                        <span class="s2">"trt_engine_cache_enable"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="s2">"trt_engine_cache_path"</span><span class="p">:</span> <span class="n">TENSORRT_CACHE_PATH</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">),</span>
+                <span class="s2">"CUDAExecutionProvider"</span><span class="p">,</span>
+                <span class="s2">"CPUExecutionProvider"</span><span class="p">,</span>
+            <span class="p">],</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">REQUIRED_ONNX_PROVIDERS</span><span class="p">:</span>
+            <span class="n">available_providers</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">get_available_providers</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">provider</span> <span class="ow">in</span> <span class="n">REQUIRED_ONNX_PROVIDERS</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">provider</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">available_providers</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">OnnxProviderNotAvailable</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">"Required ONNX Execution Provider </span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2"> is not availble. Check that you are using the correct docker image on a supported device."</span>
+                    <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">clip_preprocess</span> <span class="o">=</span> <span class="n">_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">"CLIP model loaded in </span><span class="si">{</span><span class="n">perf_counter</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">compare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipCompareRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipCompareResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Compares the subject with the prompt using the Clip model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            request (ClipCompareRequest): The request object containing the subject and prompt.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ClipCompareResponse: The response object containing the similarity score.</span>
+<span class="sd">        """</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">subject_type</span> <span class="o">==</span> <span class="s2">"image"</span><span class="p">:</span>
+            <span class="n">subject_embed_request</span> <span class="o">=</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+            <span class="n">subject_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span><span class="p">(</span><span class="n">subject_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">subject_type</span> <span class="o">==</span> <span class="s2">"text"</span><span class="p">:</span>
+            <span class="n">subject_embed_request</span> <span class="o">=</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+            <span class="n">subject_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span><span class="p">(</span><span class="n">subject_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">"subject_type must be either 'image' or 'text', but got </span><span class="si">{request.subject_type}</span><span class="s2">"</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">prompt_keys</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+            <span class="n">prompt</span> <span class="o">=</span> <span class="p">[</span><span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">prompt_keys</span><span class="p">]</span>
+            <span class="n">prompt_obj</span> <span class="o">=</span> <span class="s2">"dict"</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">prompt</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+                <span class="n">prompt</span> <span class="o">=</span> <span class="p">[</span><span class="n">prompt</span><span class="p">]</span>
+            <span class="n">prompt_obj</span> <span class="o">=</span> <span class="s2">"list"</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"The maximum number of prompts that can be compared at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt_type</span> <span class="o">==</span> <span class="s2">"image"</span><span class="p">:</span>
+            <span class="n">prompt_embed_request</span> <span class="o">=</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">prompt</span><span class="p">)</span>
+            <span class="n">prompt_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span><span class="p">(</span><span class="n">prompt_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span>
+        <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt_type</span> <span class="o">==</span> <span class="s2">"text"</span><span class="p">:</span>
+            <span class="n">prompt_embed_request</span> <span class="o">=</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">prompt</span><span class="p">)</span>
+            <span class="n">prompt_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span><span class="p">(</span><span class="n">prompt_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">"prompt_type must be either 'image' or 'text', but got </span><span class="si">{request.prompt_type}</span><span class="s2">"</span>
+            <span class="p">)</span>
+
+        <span class="n">similarities</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">subject_embeddings</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prompt_embeddings</span>
+        <span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">prompt_obj</span> <span class="o">==</span> <span class="s2">"dict"</span><span class="p">:</span>
+            <span class="n">similarities</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">prompt_keys</span><span class="p">,</span> <span class="n">similarities</span><span class="p">))</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">ClipCompareResponse</span><span class="p">(</span>
+            <span class="n">similarity</span><span class="o">=</span><span class="n">similarities</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+    <span class="k">def</span> <span class="nf">embed_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Embeds an image using the Clip model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            request (ClipImageEmbeddingRequest): The request object containing the image.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">        """</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"The maximum number of images that can be embedded at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+                <span class="p">)</span>
+            <span class="n">imgs</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">preproc_image</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">]</span>
+            <span class="n">img_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">imgs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">img_in</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preproc_image</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+
+        <span class="n">onnx_input_image</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">img_in</span><span class="p">}</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">onnx_input_image</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">ClipEmbeddingResponse</span><span class="p">(</span>
+            <span class="n">embeddings</span><span class="o">=</span><span class="n">embeddings</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+    <span class="k">def</span> <span class="nf">embed_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Embeds a text using the Clip model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            request (ClipTextEmbeddingRequest): The request object containing the text.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">        """</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"The maximum number of text strings that can be embedded at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+                <span class="p">)</span>
+
+            <span class="n">texts</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">]</span>
+
+        <span class="n">texts</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+        <span class="n">onnx_input_text</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">texts</span><span class="p">}</span>
+        <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">onnx_input_text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">ClipEmbeddingResponse</span><span class="p">(</span>
+            <span class="n">embeddings</span><span class="o">=</span><span class="n">embeddings</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+    <span class="k">def</span> <span class="nf">get_infer_bucket_file_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">"""Gets the list of files required for inference.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: The list of file names.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s2">"textual.onnx"</span><span class="p">,</span> <span class="s2">"visual.onnx"</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipInferenceRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Routes the request to the appropriate inference function.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            request (ClipInferenceRequest): The request object containing the inference details.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">):</span>
+            <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">):</span>
+            <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipCompareRequest</span><span class="p">):</span>
+            <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compare</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"Request type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not a valid ClipInferenceRequest"</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">infer_func</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">preproc_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">:</span> <span class="n">InferenceRequestImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Preprocesses an inference request image.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            image (InferenceRequestImage): The object containing information necessary to load the image for inference.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: A numpy array of the preprocessed image pixel data.</span>
+<span class="sd">        """</span>
+        <span class="n">pil_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">preprocessed_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clip_preprocess</span><span class="p">(</span><span class="n">pil_image</span><span class="p">)</span>
+
+        <span class="n">img_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">preprocessed_image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">img_in</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="doc doc-children">
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.__init__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Initializes the ClipOnnxRoboflowCoreModel with the given arguments and keyword arguments.</p>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Initializes the ClipOnnxRoboflowCoreModel with the given arguments and keyword arguments."""</span>
+
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="c1"># Create an ONNX Runtime Session with a list of execution providers in priority order. ORT attempts to load providers until one is successful. This keeps the code across devices identical.</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"Creating inference sessions"</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache_file</span><span class="p">(</span><span class="s2">"visual.onnx"</span><span class="p">),</span>
+        <span class="n">providers</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span>
+                <span class="s2">"TensorrtExecutionProvider"</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">"trt_engine_cache_enable"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">"trt_engine_cache_path"</span><span class="p">:</span> <span class="n">TENSORRT_CACHE_PATH</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">),</span>
+            <span class="s2">"CUDAExecutionProvider"</span><span class="p">,</span>
+            <span class="s2">"CPUExecutionProvider"</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">InferenceSession</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cache_file</span><span class="p">(</span><span class="s2">"textual.onnx"</span><span class="p">),</span>
+        <span class="n">providers</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span>
+                <span class="s2">"TensorrtExecutionProvider"</span><span class="p">,</span>
+                <span class="p">{</span>
+                    <span class="s2">"trt_engine_cache_enable"</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                    <span class="s2">"trt_engine_cache_path"</span><span class="p">:</span> <span class="n">TENSORRT_CACHE_PATH</span><span class="p">,</span>
+                <span class="p">},</span>
+            <span class="p">),</span>
+            <span class="s2">"CUDAExecutionProvider"</span><span class="p">,</span>
+            <span class="s2">"CPUExecutionProvider"</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">REQUIRED_ONNX_PROVIDERS</span><span class="p">:</span>
+        <span class="n">available_providers</span> <span class="o">=</span> <span class="n">onnxruntime</span><span class="o">.</span><span class="n">get_available_providers</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">provider</span> <span class="ow">in</span> <span class="n">REQUIRED_ONNX_PROVIDERS</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">provider</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">available_providers</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">OnnxProviderNotAvailable</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">"Required ONNX Execution Provider </span><span class="si">{</span><span class="n">provider</span><span class="si">}</span><span class="s2"> is not availble. Check that you are using the correct docker image on a supported device."</span>
+                <span class="p">)</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">resolution</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="bp">self</span><span class="o">.</span><span class="n">clip_preprocess</span> <span class="o">=</span> <span class="n">_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">resolution</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="sa">f</span><span class="s2">"CLIP model loaded in </span><span class="si">{</span><span class="n">perf_counter</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">t1</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> seconds"</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.compare">
+<code class="highlight language-python"><span class="n">compare</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.compare" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Compares the subject with the prompt using the Clip model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><a class="autorefs autorefs-internal" title="inference.core.data_models.ClipCompareRequest" href="../../data_models/clip/clip_compare_request/#inference.core.data_models.ClipCompareRequest">ClipCompareRequest</a></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request object containing the subject and prompt.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClipCompareResponse</code></td> <td>
+<code><span title="inference.core.data_models.ClipCompareResponse">ClipCompareResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The response object containing the similarity score.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">compare</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipCompareRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipCompareResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Compares the subject with the prompt using the Clip model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (ClipCompareRequest): The request object containing the subject and prompt.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClipCompareResponse: The response object containing the similarity score.</span>
+<span class="sd">    """</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">subject_type</span> <span class="o">==</span> <span class="s2">"image"</span><span class="p">:</span>
+        <span class="n">subject_embed_request</span> <span class="o">=</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+        <span class="n">subject_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span><span class="p">(</span><span class="n">subject_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">subject_type</span> <span class="o">==</span> <span class="s2">"text"</span><span class="p">:</span>
+        <span class="n">subject_embed_request</span> <span class="o">=</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">subject</span><span class="p">)</span>
+        <span class="n">subject_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span><span class="p">(</span><span class="n">subject_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">"subject_type must be either 'image' or 'text', but got </span><span class="si">{request.subject_type}</span><span class="s2">"</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="n">prompt_keys</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="n">prompt</span> <span class="o">=</span> <span class="p">[</span><span class="n">request</span><span class="o">.</span><span class="n">prompt</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">prompt_keys</span><span class="p">]</span>
+        <span class="n">prompt_obj</span> <span class="o">=</span> <span class="s2">"dict"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">prompt</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="n">prompt</span> <span class="o">=</span> <span class="p">[</span><span class="n">prompt</span><span class="p">]</span>
+        <span class="n">prompt_obj</span> <span class="o">=</span> <span class="s2">"list"</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"The maximum number of prompts that can be compared at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt_type</span> <span class="o">==</span> <span class="s2">"image"</span><span class="p">:</span>
+        <span class="n">prompt_embed_request</span> <span class="o">=</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">prompt</span><span class="p">)</span>
+        <span class="n">prompt_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span><span class="p">(</span><span class="n">prompt_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span>
+    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">prompt_type</span> <span class="o">==</span> <span class="s2">"text"</span><span class="p">:</span>
+        <span class="n">prompt_embed_request</span> <span class="o">=</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">prompt</span><span class="p">)</span>
+        <span class="n">prompt_embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span><span class="p">(</span><span class="n">prompt_embed_request</span><span class="p">)</span><span class="o">.</span><span class="n">embeddings</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">"prompt_type must be either 'image' or 'text', but got </span><span class="si">{request.prompt_type}</span><span class="s2">"</span>
+        <span class="p">)</span>
+
+    <span class="n">similarities</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">subject_embeddings</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prompt_embeddings</span>
+    <span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">prompt_obj</span> <span class="o">==</span> <span class="s2">"dict"</span><span class="p">:</span>
+        <span class="n">similarities</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">prompt_keys</span><span class="p">,</span> <span class="n">similarities</span><span class="p">))</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">ClipCompareResponse</span><span class="p">(</span>
+        <span class="n">similarity</span><span class="o">=</span><span class="n">similarities</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_image">
+<code class="highlight language-python"><span class="n">embed_image</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_image" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Embeds an image using the Clip model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><a class="autorefs autorefs-internal" title="inference.core.data_models.ClipImageEmbeddingRequest" href="../../data_models/clip/clip_image_embedding_request/#inference.core.data_models.ClipImageEmbeddingRequest">ClipImageEmbeddingRequest</a></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request object containing the image.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClipEmbeddingResponse</code></td> <td>
+<code><span title="inference.core.data_models.ClipEmbeddingResponse">ClipEmbeddingResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The response object containing the embeddings.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">embed_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Embeds an image using the Clip model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (ClipImageEmbeddingRequest): The request object containing the image.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">    """</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"The maximum number of images that can be embedded at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+            <span class="p">)</span>
+        <span class="n">imgs</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">preproc_image</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">]</span>
+        <span class="n">img_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">imgs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">img_in</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">preproc_image</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+
+    <span class="n">onnx_input_image</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">img_in</span><span class="p">}</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">visual_onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">onnx_input_image</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">ClipEmbeddingResponse</span><span class="p">(</span>
+        <span class="n">embeddings</span><span class="o">=</span><span class="n">embeddings</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_text">
+<code class="highlight language-python"><span class="n">embed_text</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.embed_text" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Embeds a text using the Clip model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><a class="autorefs autorefs-internal" title="inference.core.data_models.ClipTextEmbeddingRequest" href="../../data_models/clip/clip_text_embedding_request/#inference.core.data_models.ClipTextEmbeddingRequest">ClipTextEmbeddingRequest</a></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request object containing the text.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClipEmbeddingResponse</code></td> <td>
+<code><span title="inference.core.data_models.ClipEmbeddingResponse">ClipEmbeddingResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The response object containing the embeddings.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">embed_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Embeds a text using the Clip model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (ClipTextEmbeddingRequest): The request object containing the text.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">    """</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">perf_counter</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">CLIP_MAX_BATCH_SIZE</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">"The maximum number of text strings that can be embedded at once is </span><span class="si">{</span><span class="n">CLIP_MAX_BATCH_SIZE</span><span class="si">}</span><span class="s2">"</span>
+            <span class="p">)</span>
+
+        <span class="n">texts</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">text</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">request</span><span class="o">.</span><span class="n">text</span><span class="p">]</span>
+
+    <span class="n">texts</span> <span class="o">=</span> <span class="n">tokenize</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+    <span class="n">onnx_input_text</span> <span class="o">=</span> <span class="p">{</span><span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span><span class="o">.</span><span class="n">get_inputs</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">texts</span><span class="p">}</span>
+    <span class="n">embeddings</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">textual_onnx_session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">onnx_input_text</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">ClipEmbeddingResponse</span><span class="p">(</span>
+        <span class="n">embeddings</span><span class="o">=</span><span class="n">embeddings</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="n">time</span><span class="o">=</span><span class="n">perf_counter</span><span class="p">()</span> <span class="o">-</span> <span class="n">t1</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">response</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.get_infer_bucket_file_list">
+<code class="highlight language-python"><span class="n">get_infer_bucket_file_list</span><span class="p">()</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.get_infer_bucket_file_list" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Gets the list of files required for inference.</p>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="typing.List">List</span>[str]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>List[str]: The list of file names.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_infer_bucket_file_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">"""Gets the list of files required for inference.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: The list of file names.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s2">"textual.onnx"</span><span class="p">,</span> <span class="s2">"visual.onnx"</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.infer">
+<code class="highlight language-python"><span class="n">infer</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.infer" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Routes the request to the appropriate inference function.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><a class="autorefs autorefs-internal" title="inference.core.data_models.ClipInferenceRequest" href="../../data_models/clip/clip_inference_request/#inference.core.data_models.ClipInferenceRequest">ClipInferenceRequest</a></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request object containing the inference details.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ClipEmbeddingResponse</code></td> <td>
+<code><span title="inference.core.data_models.ClipEmbeddingResponse">ClipEmbeddingResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The response object containing the embeddings.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">ClipInferenceRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ClipEmbeddingResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Routes the request to the appropriate inference function.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        request (ClipInferenceRequest): The request object containing the inference details.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        ClipEmbeddingResponse: The response object containing the embeddings.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipImageEmbeddingRequest</span><span class="p">):</span>
+        <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_image</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipTextEmbeddingRequest</span><span class="p">):</span>
+        <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_text</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">ClipCompareRequest</span><span class="p">):</span>
+        <span class="n">infer_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compare</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"Request type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not a valid ClipInferenceRequest"</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">infer_func</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.models.clip.clip.ClipOnnxRoboflowCoreModel.preproc_image">
+<code class="highlight language-python"><span class="n">preproc_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.models.clip.clip.ClipOnnxRoboflowCoreModel.preproc_image" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Preprocesses an inference request image.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>image</code></td>
+<td>
+<code><a class="autorefs autorefs-internal" title="inference.core.data_models.InferenceRequestImage" href="../../data_models/inference/inference_request_image/#inference.core.data_models.InferenceRequestImage">InferenceRequestImage</a></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The object containing information necessary to load the image for inference.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>np.ndarray: A numpy array of the preprocessed image pixel data.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/models/clip/clip.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">preproc_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">:</span> <span class="n">InferenceRequestImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Preprocesses an inference request image.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        image (InferenceRequestImage): The object containing information necessary to load the image for inference.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: A numpy array of the preprocessed image pixel data.</span>
+<span class="sd">    """</span>
+    <span class="n">pil_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">image</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">preprocessed_image</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clip_preprocess</span><span class="p">(</span><span class="n">pil_image</span><span class="p">)</span>
+
+    <span class="n">img_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">preprocessed_image</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">img_in</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>

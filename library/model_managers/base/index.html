@@ -7,16 +7,17 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="With no prior knowledge of machine learning or device-specific deployment, you can deploy a computer vision model to a range of devices and environments using the Roboflow Inference Server." name="description"/>
 <meta content="Roboflow" name="author"/>
-<link href="https://roboflow.github.io/inference-server/library/model_managers/base/" rel="canonical"/>
+<link href="https://roboflow.github.io/inference/library/model_managers/base/" rel="canonical"/>
 <link href="../../models/yolov7_instance_segmentation/" rel="prev"/>
 <link href="../pingback/" rel="next"/>
 <link href="https://media.roboflow.com/laptop-lenny.png" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
-<title>Base Manager - Roboflow Inference Server</title>
+<title>Base Manager - Roboflow Inference</title>
 <link href="../../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../../styles.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-T0CED2YY8K"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-T0CED2YY8K",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-T0CED2YY8K",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
@@ -38,7 +39,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Roboflow Inference Server" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -48,7 +49,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Roboflow Inference Server
+            Roboflow Inference
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -91,12 +92,12 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -110,18 +111,18 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Roboflow Inference Server" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
-    Roboflow Inference Server
+    Roboflow Inference
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -247,9 +248,106 @@
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Base Manager
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         Base Manager
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager">
+    inference.core.managers.base.ModelManager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__contains__">
+    __contains__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__getitem__">
+    __getitem__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__len__">
+    __len__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.add_model">
+    add_model()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.check_for_model">
+    check_for_model()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.clear">
+    clear()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.get_class_names">
+    get_class_names()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.get_task_type">
+    get_task_type()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.infer">
+    infer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.init_pingback">
+    init_pingback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.keys">
+    keys()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.make_response">
+    make_response()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.postprocess">
+    postprocess()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.predict">
+    predict()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.preprocess">
+    preprocess()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.remove">
+    remove()
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../pingback/">
@@ -336,6 +434,97 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager">
+    inference.core.managers.base.ModelManager
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__contains__">
+    __contains__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__getitem__">
+    __getitem__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.__len__">
+    __len__()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.add_model">
+    add_model()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.check_for_model">
+    check_for_model()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.clear">
+    clear()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.get_class_names">
+    get_class_names()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.get_task_type">
+    get_task_type()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.infer">
+    infer()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.init_pingback">
+    init_pingback()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.keys">
+    keys()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.make_response">
+    make_response()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.postprocess">
+    postprocess()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.predict">
+    predict()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.preprocess">
+    preprocess()
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.managers.base.ModelManager.remove">
+    remove()
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -343,6 +532,1551 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="base-model-manager">Base Model Manager<a class="headerlink" href="#base-model-manager" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-class">
+<a id="inference.core.managers.base.ModelManager"></a>
+<div class="doc doc-contents first">
+<p>Model managers keep track of a dictionary of Model objects and is responsible for passing requests to the right model using the infer method.</p>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">ModelManager</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Model managers keep track of a dictionary of Model objects and is responsible for passing requests to the right model using the infer method."""</span>
+
+    <span class="n">_models</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Model</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">init_pingback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Initializes pingback mechanism."""</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_errors</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># in the device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span> <span class="o">=</span> <span class="n">ROBOFLOW_SERVER_UUID</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pingback</span> <span class="o">=</span> <span class="n">PingbackInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pingback</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Adds a new model to the manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">            model (Model): The model instance.</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+
+    <span class="k">def</span> <span class="nf">check_for_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Checks whether the model with the given ID is in the manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            InferenceModelNotFound: If the model is not found in the manager.</span>
+<span class="sd">        """</span>
+        <span class="k">if</span> <span class="n">model_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">InferenceModelNotFound</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Model with id </span><span class="si">{</span><span class="n">model_id</span><span class="si">}</span><span class="s2"> not loaded."</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">InferenceRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InferenceResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Runs inference on the specified model with the given request.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">            request (InferenceRequest): The request to process.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            InferenceResponse: The response from the inference.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"num_inferences"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="n">rtn_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">infer</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"avg_inference_time"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span>
+        <span class="k">return</span> <span class="n">rtn_val</span>
+
+    <span class="k">def</span> <span class="nf">make_response</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">predictions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InferenceResponse</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Creates a response object from the model's predictions.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">            predictions (List[List[float]]): The model's predictions.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            InferenceResponse: The created response object.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">make_response</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">predictions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">"""Processes the model's predictions after inference.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">            predictions (np.ndarray): The model's predictions.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[List[float]]: The post-processed predictions.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">postprocess</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Runs prediction on the specified model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            np.ndarray: The predictions from the model.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"num_inferences"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"avg_inference_time"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">InferenceRequest</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">"""Preprocesses the request before inference.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">            request (InferenceRequest): The request to preprocess.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Tuple[np.ndarray, List[Tuple[int, int]]]: The preprocessed data.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">preprocess</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_class_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Retrieves the class names for a given model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: The class names of the model.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">class_names</span>
+
+    <span class="k">def</span> <span class="nf">get_task_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Retrieves the task type for a given model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The task type of the model.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">task_type</span>
+
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Removes a model from the manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+<span class="sd">        """</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">clear_cache</span><span class="p">()</span>
+        <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Removes all models from the manager."""</span>
+        <span class="k">for</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Checks if the model is contained in the manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            model_id (str): The identifier of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: Whether the model is in the manager.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Model</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Retrieve a model from the manager by key.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            key (str): The identifier of the model.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Model: The model corresponding to the key.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">"""Retrieve the number of models in the manager.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: The number of models in the manager.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">"""Retrieve the keys (model identifiers) from the manager.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[str]: The keys of the models in the manager.</span>
+<span class="sd">        """</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="doc doc-children">
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.__contains__">
+<code class="highlight language-python"><span class="fm">__contains__</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.__contains__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Checks if the model is contained in the manager.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bool</code></td> <td>
+<code>bool</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Whether the model is in the manager.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Checks if the model is contained in the manager.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: Whether the model is in the manager.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.__getitem__">
+<code class="highlight language-python"><span class="fm">__getitem__</span><span class="p">(</span><span class="n">key</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.__getitem__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Retrieve a model from the manager by key.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>key</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Model</code></td> <td>
+<code><span title="inference.core.models.base.Model">Model</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The model corresponding to the key.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Model</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Retrieve a model from the manager by key.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        key (str): The identifier of the model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Model: The model corresponding to the key.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.__len__">
+<code class="highlight language-python"><span class="fm">__len__</span><span class="p">()</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.__len__" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Retrieve the number of models in the manager.</p>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td> <td>
+<code>int</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The number of models in the manager.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Retrieve the number of models in the manager.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: The number of models in the manager.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.add_model">
+<code class="highlight language-python"><span class="n">add_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.add_model" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Adds a new model to the manager.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td>
+<code><span title="inference.core.models.base.Model">Model</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The model instance.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Adds a new model to the manager.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">        model (Model): The model instance.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.check_for_model">
+<code class="highlight language-python"><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.check_for_model" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Checks whether the model with the given ID is in the manager.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Raises:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="inference.core.exceptions.InferenceModelNotFound">InferenceModelNotFound</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>If the model is not found in the manager.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">check_for_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Checks whether the model with the given ID is in the manager.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        InferenceModelNotFound: If the model is not found in the manager.</span>
+<span class="sd">    """</span>
+    <span class="k">if</span> <span class="n">model_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">InferenceModelNotFound</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Model with id </span><span class="si">{</span><span class="n">model_id</span><span class="si">}</span><span class="s2"> not loaded."</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.clear">
+<code class="highlight language-python"><span class="n">clear</span><span class="p">()</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.clear" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Removes all models from the manager.</p>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Removes all models from the manager."""</span>
+    <span class="k">for</span> <span class="n">model_id</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.get_class_names">
+<code class="highlight language-python"><span class="n">get_class_names</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.get_class_names" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Retrieves the class names for a given model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+<div class="doc-md-description">
+<p>List[str]: The class names of the model.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_class_names</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Retrieves the class names for a given model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: The class names of the model.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">class_names</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.get_task_type">
+<code class="highlight language-python"><span class="n">get_task_type</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.get_task_type" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Retrieves the task type for a given model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td> <td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The task type of the model.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">get_task_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Retrieves the task type for a given model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: The task type of the model.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">task_type</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.infer">
+<code class="highlight language-python"><span class="n">infer</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.infer" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Runs inference on the specified model with the given request.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><span title="inference.core.data_models.InferenceRequest">InferenceRequest</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request to process.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InferenceResponse</code></td> <td>
+<code><span title="inference.core.data_models.InferenceResponse">InferenceResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The response from the inference.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">infer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">InferenceRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InferenceResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Runs inference on the specified model with the given request.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">        request (InferenceRequest): The request to process.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        InferenceResponse: The response from the inference.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"num_inferences"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="n">rtn_val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">infer</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"avg_inference_time"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span>
+    <span class="k">return</span> <span class="n">rtn_val</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.init_pingback">
+<code class="highlight language-python"><span class="n">init_pingback</span><span class="p">()</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.init_pingback" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Initializes pingback mechanism.</p>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">init_pingback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Initializes pingback mechanism."""</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">num_errors</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># in the device</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">uuid</span> <span class="o">=</span> <span class="n">ROBOFLOW_SERVER_UUID</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pingback</span> <span class="o">=</span> <span class="n">PingbackInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">pingback</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.keys">
+<code class="highlight language-python"><span class="n">keys</span><span class="p">()</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.keys" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Retrieve the keys (model identifiers) from the manager.</p>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+<div class="doc-md-description">
+<p>List[str]: The keys of the models in the manager.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Retrieve the keys (model identifiers) from the manager.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[str]: The keys of the models in the manager.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.make_response">
+<code class="highlight language-python"><span class="n">make_response</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.make_response" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Creates a response object from the model's predictions.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+<tr>
+<td><code>predictions</code></td>
+<td>
+<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The model's predictions.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th> <th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InferenceResponse</code></td> <td>
+<code><span title="inference.core.data_models.InferenceResponse">InferenceResponse</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The created response object.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">make_response</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">predictions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InferenceResponse</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Creates a response object from the model's predictions.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">        predictions (List[List[float]]): The model's predictions.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        InferenceResponse: The created response object.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">make_response</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.postprocess">
+<code class="highlight language-python"><span class="n">postprocess</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.postprocess" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Processes the model's predictions after inference.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+<tr>
+<td><code>predictions</code></td>
+<td>
+<code><span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The model's predictions.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>List[List[float]]: The post-processed predictions.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">postprocess</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">predictions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">"""Processes the model's predictions after inference.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">        predictions (np.ndarray): The model's predictions.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        List[List[float]]: The post-processed predictions.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">postprocess</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.predict">
+<code class="highlight language-python"><span class="n">predict</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.predict" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Runs prediction on the specified model.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>np.ndarray: The predictions from the model.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Runs prediction on the specified model.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        np.ndarray: The predictions from the model.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"num_inferences"</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">metrics</span><span class="p">[</span><span class="s2">"avg_inference_time"</span><span class="p">]</span> <span class="o">+=</span> <span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.preprocess">
+<code class="highlight language-python"><span class="n">preprocess</span><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <span class="n">request</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.preprocess" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Preprocesses the request before inference.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+<tr>
+<td><code>request</code></td>
+<td>
+<code><span title="inference.core.data_models.InferenceRequest">InferenceRequest</span></code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The request to preprocess.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<code><span title="typing.Tuple">Tuple</span>[<span title="numpy">np</span>.<span title="numpy.ndarray">ndarray</span>, <span title="typing.List">List</span>[<span title="typing.Tuple">Tuple</span>[int, int]]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Tuple[np.ndarray, List[Tuple[int, int]]]: The preprocessed data.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">preprocess</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">InferenceRequest</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">"""Preprocesses the request before inference.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">        request (InferenceRequest): The request to preprocess.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Tuple[np.ndarray, List[Tuple[int, int]]]: The preprocessed data.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">check_for_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">preprocess</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="inference.core.managers.base.ModelManager.remove">
+<code class="highlight language-python"><span class="n">remove</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span></code>
+<a class="headerlink" href="#inference.core.managers.base.ModelManager.remove" title="Permanent link">¶</a></h2>
+<div class="doc doc-contents">
+<p>Removes a model from the manager.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_id</code></td>
+<td>
+<code>str</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The identifier of the model.</p>
+</div>
+</td>
+<td>
+<em>required</em>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/managers/base.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Removes a model from the manager.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model_id (str): The identifier of the model.</span>
+<span class="sd">    """</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span><span class="o">.</span><span class="n">clear_cache</span><span class="p">()</span>
+    <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span><span class="p">[</span><span class="n">model_id</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>

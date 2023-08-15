@@ -7,14 +7,15 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="With no prior knowledge of machine learning or device-specific deployment, you can deploy a computer vision model to a range of devices and environments using the Roboflow Inference Server." name="description"/>
 <meta content="Roboflow" name="author"/>
-<link href="https://roboflow.github.io/inference-server/library/data_models/sam/sam_segmentation_request/" rel="canonical"/>
+<link href="https://roboflow.github.io/inference/library/data_models/sam/sam_segmentation_request/" rel="canonical"/>
 <link href="https://media.roboflow.com/laptop-lenny.png" rel="icon"/>
 <meta content="mkdocs-1.5.2, mkdocs-material-9.1.21" name="generator"/>
-<title>SAM Segmentation Request - Roboflow Inference Server</title>
+<title>SAM Segmentation Request - Roboflow Inference</title>
 <link href="../../../../assets/stylesheets/main.eebd395e.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../assets/_mkdocstrings.css" rel="stylesheet"/>
 <link href="../../../../styles.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-T0CED2YY8K"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-T0CED2YY8K",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-T0CED2YY8K",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
@@ -36,7 +37,7 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Roboflow Inference Server" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -46,7 +47,7 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            Roboflow Inference Server
+            Roboflow Inference
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
@@ -89,12 +90,12 @@
 </div>
 </div>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -108,18 +109,18 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Roboflow Inference Server" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Roboflow Inference Server">
+<a aria-label="Roboflow Inference" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Roboflow Inference">
 <img alt="logo" src="https://media.roboflow.com/laptop-lenny.png"/>
 </a>
-    Roboflow Inference Server
+    Roboflow Inference
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference-server" title="Go to repository">
+<a class="md-source" data-md-component="source" href="https://github.com/roboflow/inference" title="Go to repository">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
-    roboflow/inference-server
+    roboflow/inference
   </div>
 </a>
 </div>
@@ -333,6 +334,17 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inference.core.data_models.SamSegmentationRequest">
+    inference.core.data_models.SamSegmentationRequest
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -340,6 +352,313 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="sam-segmentation-request">SAM Segmentation Request<a class="headerlink" href="#sam-segmentation-request" title="Permanent link">¶</a></h1>
+<div class="doc doc-object doc-class">
+<a id="inference.core.data_models.SamSegmentationRequest"></a>
+<div class="doc doc-contents first">
+<p class="doc doc-class-bases">
+        Bases: <code><span title="inference.core.data_models.SamInferenceRequest">SamInferenceRequest</span></code></p>
+<p>SAM segmentation request.</p>
+<p><strong>Attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>embeddings</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]]], <span title="typing.Any">Any</span>]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The embeddings to be decoded.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>embeddings_format</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[str]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The format of the embeddings.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>format</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[str]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The format of the response.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>image</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="inference.core.data_models.InferenceRequestImage" href="../../inference/inference_request_image/#inference.core.data_models.InferenceRequestImage">InferenceRequestImage</a>]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The image to be segmented.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>image_id</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[str]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The ID of the image to be segmented used to retrieve cached embeddings.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>has_mask_input</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[bool]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Whether or not the request includes a mask input.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>mask_input</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]], <span title="typing.Any">Any</span>]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The set of output masks.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>mask_input_format</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[str]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The format of the mask input.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>orig_im_size</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[int]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The original size of the image used to generate the embeddings.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>point_coords</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[<span title="typing.List">List</span>[float]]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The coordinates of the interactive points used during decoding.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>point_labels</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[float]]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>The labels of the interactive points used during decoding.</p>
+</div>
+</td>
+</tr>
+<tr>
+<td><code>use_mask_input_cache</code></td>
+<td>
+<code><span title="typing.Optional">Optional</span>[bool]</code>
+</td>
+<td>
+<div class="doc-md-description">
+<p>Whether or not to use the mask input cache.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<details class="quote">
+<summary>Source code in <code>inference/core/data_models.py</code></summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span>
+<span class="normal">598</span>
+<span class="normal">599</span>
+<span class="normal">600</span>
+<span class="normal">601</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span>
+<span class="normal">613</span>
+<span class="normal">614</span>
+<span class="normal">615</span>
+<span class="normal">616</span>
+<span class="normal">617</span>
+<span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
+<span class="normal">623</span>
+<span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span>
+<span class="normal">628</span>
+<span class="normal">629</span>
+<span class="normal">630</span>
+<span class="normal">631</span>
+<span class="normal">632</span>
+<span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span>
+<span class="normal">640</span>
+<span class="normal">641</span>
+<span class="normal">642</span>
+<span class="normal">643</span>
+<span class="normal">644</span>
+<span class="normal">645</span>
+<span class="normal">646</span>
+<span class="normal">647</span>
+<span class="normal">648</span>
+<span class="normal">649</span>
+<span class="normal">650</span>
+<span class="normal">651</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span>
+<span class="normal">655</span>
+<span class="normal">656</span>
+<span class="normal">657</span>
+<span class="normal">658</span>
+<span class="normal">659</span>
+<span class="normal">660</span>
+<span class="normal">661</span>
+<span class="normal">662</span>
+<span class="normal">663</span>
+<span class="normal">664</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">SamSegmentationRequest</span><span class="p">(</span><span class="n">SamInferenceRequest</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""SAM segmentation request.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        embeddings (Optional[Union[List[List[List[List[float]]]], Any]]): The embeddings to be decoded.</span>
+<span class="sd">        embeddings_format (Optional[str]): The format of the embeddings.</span>
+<span class="sd">        format (Optional[str]): The format of the response.</span>
+<span class="sd">        image (Optional[InferenceRequestImage]): The image to be segmented.</span>
+<span class="sd">        image_id (Optional[str]): The ID of the image to be segmented used to retrieve cached embeddings.</span>
+<span class="sd">        has_mask_input (Optional[bool]): Whether or not the request includes a mask input.</span>
+<span class="sd">        mask_input (Optional[Union[List[List[List[float]]], Any]]): The set of output masks.</span>
+<span class="sd">        mask_input_format (Optional[str]): The format of the mask input.</span>
+<span class="sd">        orig_im_size (Optional[List[int]]): The original size of the image used to generate the embeddings.</span>
+<span class="sd">        point_coords (Optional[List[List[float]]]): The coordinates of the interactive points used during decoding.</span>
+<span class="sd">        point_labels (Optional[List[float]]): The labels of the interactive points used during decoding.</span>
+<span class="sd">        use_mask_input_cache (Optional[bool]): Whether or not to use the mask input cache.</span>
+<span class="sd">    """</span>
+
+    <span class="n">embeddings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]]],</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">example</span><span class="o">=</span><span class="s2">"[[[[0.1, 0.2, 0.3, ...] ...] ...]]"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The embeddings to be decoded. The dimensions of the embeddings are 1 x 256 x 64 x 64. If embeddings is not provided, image must be provided."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">embeddings_format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The format of the embeddings. Must be one of json or binary. If binary, embeddings are expected to be a binary numpy array."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The format of the response. Must be one of json or binary. If binary, masks are returned as binary numpy arrays. If json, masks are converted to polygons, then returned as json."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InferenceRequestImage</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The image to be segmented. Only required if embeddings are not provided."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">image_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="s2">"image_id"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The ID of the image to be segmented used to retrieve cached embeddings. If an embedding is cached, it will be used instead of generating a new embedding. If no embedding is cached, a new embedding will be generated and cached."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">has_mask_input</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"Whether or not the request includes a mask input. If true, the mask input must be provided."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">mask_input</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]],</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The set of output masks. If request format is json, masks is a list of polygons, where each polygon is a list of points, where each point is a tuple containing the x,y pixel coordinates of the point. If request format is binary, masks is a list of binary numpy arrays. The dimensions of each mask are 256 x 256. This is the same as the output, low resolution mask from the previous inference."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">mask_input_format</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="s2">"json"</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The format of the mask input. Must be one of json or binary. If binary, mask input is expected to be a binary numpy array."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">orig_im_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="p">[</span><span class="mi">640</span><span class="p">,</span> <span class="mi">320</span><span class="p">],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The original size of the image used to generate the embeddings. This is only required if the image is not provided."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">point_coords</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]],</span>
+        <span class="n">example</span><span class="o">=</span><span class="p">[[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">]],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The coordinates of the interactive points used during decoding. Each point (x,y pair) corresponds to a label in point_labels."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">point_labels</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">example</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"The labels of the interactive points used during decoding. A 1 represents a positive point (part of the object to be segmented). A -1 represents a negative point (not part of the object to be segmented). Each label corresponds to a point in point_coords."</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">use_mask_input_cache</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">example</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">"Whether or not to use the mask input cache. If true, the mask input cache will be used if it exists. If false, the mask input cache will not be used."</span><span class="p">,</span>
+    <span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="doc doc-children">
+</div>
+</div>
+</div>
 </article>
 </div>
 </div>
