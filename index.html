@@ -219,25 +219,6 @@
     Build the Documentation
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#initial-benchmark-speed-results">
-    Initial Benchmark Speed Results 📈
-  </a>
-<nav aria-label="Initial Benchmark Speed Results 📈" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#legacy-trt">
-    Legacy TRT
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onnx-trt">
-    ONNX TRT
-  </a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </li>
@@ -415,6 +396,11 @@
         HTTP Interface
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="library/interfaces/udp/">
+        UDP Stream Interface
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -527,25 +513,6 @@
 <a class="md-nav__link" href="#build-the-documentation">
     Build the Documentation
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#initial-benchmark-speed-results">
-    Initial Benchmark Speed Results 📈
-  </a>
-<nav aria-label="Initial Benchmark Speed Results 📈" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#legacy-trt">
-    Legacy TRT
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#onnx-trt">
-    ONNX TRT
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -700,18 +667,6 @@ pip<span class="w"> </span>install<span class="w"> </span>inference<span class="
 <p>Before a new release is published, a new version of the documentation should be built. To create a new version, run:</p>
 <div class="highlight"><pre><span></span><code>mike<span class="w"> </span>deploy<span class="w"> </span>&lt;version-number&gt;
 </code></pre></div>
-<h2 id="initial-benchmark-speed-results">Initial Benchmark Speed Results 📈<a class="headerlink" href="#initial-benchmark-speed-results" title="Permanent link">¶</a></h2>
-<p>The Roboflow team has run initial benchmarks on the inference server. Our results are below.</p>
-<h3 id="legacy-trt">Legacy TRT<a class="headerlink" href="#legacy-trt" title="Permanent link">¶</a></h3>
-<ul>
-<li>Node Benchmark: 50FPS (36 frames in 0.72s)</li>
-<li>Python Benchmark: 22FPS (93FPS internal)</li>
-</ul>
-<h3 id="onnx-trt">ONNX TRT<a class="headerlink" href="#onnx-trt" title="Permanent link">¶</a></h3>
-<ul>
-<li>Node Benchmark: 63FPS (36 frames in 0.57s)</li>
-<li>Python Benchmark: 27FPS (53FPS internal)</li>
-</ul>
 </article>
 </div>
 </div>
